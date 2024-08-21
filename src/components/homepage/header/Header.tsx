@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../../ui/button";
 import IMAGE_LINK from "../../../assets/TrExa.png";
-import { ProfileForm } from "../form/ProfileForm";
-import { useState } from "react";
 
 type HeaderProps = {
   setToggleForm?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,7 +20,7 @@ export const Header = ({ setToggleForm }: HeaderProps) => {
     { name: "Item Three", link: "Link Three" },
     { name: "Item Four", link: "Link Four" },
   ];
-  const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
+  // const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
   return (
     <section>
       <header

@@ -1,5 +1,3 @@
-import { Header } from "../../components/homepage/header/Header";
-import { Footer } from "@/components/homepage/footer/Footer";
 import { Title } from "@/components/homepage/title/Title";
 import { TrustedBy } from "@/components/homepage/title/TrustedBy";
 import { FeaturesWithImages } from "@/components/homepage/features/FeaturesWithImages";
