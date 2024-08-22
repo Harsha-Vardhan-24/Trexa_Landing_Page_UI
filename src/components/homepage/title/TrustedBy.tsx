@@ -14,7 +14,7 @@ export const TrustedBy = () => {
     { name: "play logo", link: play_logo },
   ];
   return (
-    <Card className="mt-24 md:mt-42">
+    <Card className="mt-24 md:mt-42 pt-6">
       <CardTitle>
         <h1 className="font-semibold text-slate-400 text-sm tracking-tighter">
           Trusted by
