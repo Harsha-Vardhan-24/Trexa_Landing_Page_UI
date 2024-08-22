@@ -17,26 +17,43 @@ const onlineExaminationData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: string[];
+  listItems?: (string | { name: string; link: string })[];
 }[] = [
   {
     title: "Online Examination Solution",
     description: "Conduct scalable remote exams",
     listItems: [
-      "Examination Platform",
-      "Entrance Exam",
-      "Semester Exam",
-      "Online Evaluation System",
+      {
+        name: "Examination Platform",
+        link: "/examinationplatform",
+      },
+      {
+        name: "Entrance Exam",
+        link: "/entranceexam",
+      },
+      {
+        name: "Semester Exam",
+        link: "/semesterplatform",
+      },
+      {
+        name: "Online Evaluation System",
+        link: "/onlineevaulationsystem",
+      },
     ],
   },
   {
     title: "Remote Proctoring Solution",
     description: "AI-based proctoring suite",
-    listItems: ["Secure Proctor"],
+    listItems: [
+      {
+        name: "Secure Proctor",
+        link: "/secureproctor",
+      },
+    ],
   },
   {
     title: "Online Certification Program",
-    href: "/docs/primitives/progress",
+    href: "/onlinecertplatform",
     description: "Run online certification programs",
   },
 ];
@@ -44,45 +61,93 @@ const remoteProctoringData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: string[];
+  listItems?: (string | { name: string; link: string })[];
 }[] = [
   {
     title: "Talent Assessments",
     description: "Assess your talent holistically",
     listItems: [
-      "Psychometric Tests",
-      "Behavioral Tests",
-      "Aptitude Tests",
-      "Technical Tests",
+      {
+        name: "Psychometric Tests",
+        link: "/psychometrictesting",
+      },
+      {
+        name: "Behavioral Tests",
+        link: "/behavioraltesting",
+      },
+      {
+        name: "Aptitude Tests",
+        link: "/aptitudetesting",
+      },
+      {
+        name: "Technical Tests",
+        link: "/technicaltesting",
+      },
     ],
   },
   {
     title: "Coding Assessments",
     description: "Find the best coders efficiently",
-    listItems: ["Coding Skills Tests"],
+    listItems: [
+      {
+        name: "Coding Skills Tests",
+        link: "",
+      },
+    ],
   },
   {
     title: "Lateral Hiring",
     description: "Assessments to hire the best talent",
-    listItems: ["Technical Hiring", "Sales Hiring"],
+    listItems: [
+      {
+        name: "Technical Hiring",
+        link: "/technicalhiring",
+      },
+      {
+        name: "Sales Hiring",
+        link: "/saleshiring",
+      },
+    ],
   },
   {
     title: "Campus Hiring",
     description: "Hire right talent from right campus",
     listItems: [
-      "Campus Intelligence",
-      "Student Engagement",
-      "Screening Engagement",
+      {
+        name: "Campus Intelligence",
+        link: "/campusintelligence",
+      },
+      {
+        name: "Student Engagement",
+        link: "/studentengagement",
+      },
+      {
+        name: "Screening Engagement",
+        link: "/screeningengagement",
+      },
     ],
   },
   {
     title: "Hackathos and Ideathons",
     description: "Accelerate innovations",
-    listItems: ["For Corporates", "For Community"],
+    listItems: [
+      {
+        name: "For Corporates",
+        link: "/corporatehackathon",
+      },
+      {
+        name: "For Community",
+        link: "/communityhackathon",
+      },
+      {
+        name: "Screening Engagement",
+        link: "/screeningengagement",
+      },
+    ],
   },
   {
     title: "360-Degree Feedback",
-    href: "/docs/primitives/progress",
+    href: "/feedbacktool",
     description: "Easy to use feedback tool",
   },
 ];
@@ -90,17 +155,17 @@ const howItWorksData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: string[];
+  listItems?: (string | { name: string; link: string })[];
 }[] = [
   {
     title: "Tools",
-    href: "/docs/primitives/alert-dialog",
+    href: "/tools",
     description:
       "How we create the best and innpvative tools in this education.",
   },
   {
     title: "Technology",
-    href: "/docs/primitives/hover-card",
+    href: "/technology",
     description:
       "How we use the best in class technology to create the best experience for your organization.",
   },
@@ -131,9 +196,17 @@ export function Header() {
                     {/* Map over the description array */}
                     {data.description}
                     <ul>
-                      {data.listItems?.map((desc, index) => (
-                        <ListItem key={index} href="#" className="p-0">
-                          <div className="text-black font-normal">{desc}</div>
+                      {data.listItems?.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          href={
+                            typeof item === "string" ? "#" : item.link || "#"
+                          }
+                          className="p-0"
+                        >
+                          <div className="text-black font-normal">
+                            {typeof item === "string" ? item : item.name}
+                          </div>
                         </ListItem>
                       ))}
                     </ul>
@@ -156,9 +229,17 @@ export function Header() {
                     {/* Map over the description array */}
                     {data.description}
                     <ul>
-                      {data.listItems?.map((desc, index) => (
-                        <ListItem key={index} href="#" className="p-0">
-                          <div className="text-black font-normal">{desc}</div>
+                      {data.listItems?.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          href={
+                            typeof item === "string" ? "#" : item.link || "#"
+                          }
+                          className="p-0"
+                        >
+                          <div className="text-black font-normal">
+                            {typeof item === "string" ? item : item.name}
+                          </div>
                         </ListItem>
                       ))}
                     </ul>
