@@ -15,6 +15,7 @@ import { AptitudeTesting } from "./pages/hiringAndL&D/AptitudeTesting";
 import { TechnicalTesting } from "./pages/hiringAndL&D/TechnicalTesting";
 import { ComingSoon } from "./components/common/ComingSoon";
 import { FeedbackTool } from "./pages/tools/FeedbackTool";
+import { Tools } from "./pages/howItWorks/Tools";
 
 function App() {
   const router = createBrowserRouter([
@@ -101,6 +102,10 @@ function App() {
         {
           path: "/feedbacktool",
           element: <FeedbackTool />,
+        },
+        {
+          path: "/tools",
+          element: <Tools />,
         },
       ],
     },
