@@ -10,6 +10,11 @@ import { OnlineEvaulationSystem } from "./pages/examinationSolution/OnlineEvaula
 import { SecureProctor } from "./pages/examinationSolution/SecureProctor";
 import { OnlineCertPlatform } from "./pages/examinationSolution/OnlineCertificationPlatform";
 import { PsychometricTesting } from "./pages/hiringAndL&D/PsychometricTesting";
+import { BehavioralTesting } from "./pages/hiringAndL&D/BehavioralTesting";
+import { AptitudeTesting } from "./pages/hiringAndL&D/AptitudeTesting";
+import { TechnicalTesting } from "./pages/hiringAndL&D/TechnicalTesting";
+import { ComingSoon } from "./components/common/ComingSoon";
+import { FeedbackTool } from "./pages/tools/FeedbackTool";
 
 function App() {
   const router = createBrowserRouter([
@@ -48,9 +53,54 @@ function App() {
         {
           path: "/onlinecertplatform",
           element: <OnlineCertPlatform />,
-        },        {
+        },
+        {
           path: "/psychometrictesting",
           element: <PsychometricTesting />,
+        },
+        {
+          path: "/behavioraltesting",
+          element: <BehavioralTesting />,
+        },
+        {
+          path: "/aptitudetesting",
+          element: <AptitudeTesting />,
+        },
+        {
+          path: "/technicaltesting",
+          element: <TechnicalTesting />,
+        },
+        {
+          path: "/technicalhiring",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/saleshiring",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/corporatehackathon",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/communityhackathon",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/campusintelligence",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/studentengagement",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/screeningengagement",
+          element: <ComingSoon />,
+        },
+        {
+          path: "/feedbacktool",
+          element: <FeedbackTool />,
         },
       ],
     },
