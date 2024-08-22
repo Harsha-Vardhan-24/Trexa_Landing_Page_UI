@@ -3,6 +3,8 @@ import "./App.css";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { BlogsPage } from "./pages/blogsPage/BlogsPage";
 import { Layout } from "./pages/layout/Layout";
+import { Examinationplatform } from "./pages/examinationSolution/Examinationplatform";
+import { SemesterExamPlatform } from "./pages/examinationSolution/SemesterExamPlatform";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,11 +20,15 @@ function App() {
           path: "/blogs",
           element: <BlogsPage />,
         },
+        {
+          path: "/examinationplatform",
+          element: <Examinationplatform />,
+        },
+        {
+          path: "/semesterplatform",
+          element: <SemesterExamPlatform />,
+        },
       ],
-    },
-    {
-      path: "/blog",
-      element: <BlogsPage />,
     },
   ]);
 
