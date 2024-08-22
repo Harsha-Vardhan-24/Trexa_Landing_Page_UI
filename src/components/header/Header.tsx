@@ -12,32 +12,62 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
 
-const onlineExaminationData: { title: string; href: string; description: string }[] = [
+const onlineExaminationData: {
+  title: string;
+  href: string;
+  description: string;
+  listItems: string[];
+}[] = [
   {
     title: "Examination Platform",
     href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    description: "Conduct scalable remote exams",
+    listItems: [
+      "Examination Platform",
+      "Entrance Exam",
+      "Semester Exam",
+      "Online Evaluation System",
+    ],
   },
   {
     title: "Entrance Exam",
     href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    description: "Conduct scalable remote exams",
+    listItems: [
+      "Examination Platform",
+      "Entrance Exam",
+      "Semester Exam",
+      "Online Evaluation System",
+    ],
   },
   {
     title: "Semester Exam",
     href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    description: "Conduct scalable remote exams",
+    listItems: [
+      "Examination Platform",
+      "Entrance Exam",
+      "Semester Exam",
+      "Online Evaluation System",
+    ],
   },
   {
     title: "Online Evaluation System",
     href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    description: "Conduct scalable remote exams",
+    listItems: [
+      "Examination Platform",
+      "Entrance Exam",
+      "Semester Exam",
+      "Online Evaluation System",
+    ],
   },
 ];
-const remoteProctoringData: { title: string; href: string; description: string }[] = [
+const remoteProctoringData: {
+  title: string;
+  href: string;
+  description: string;
+}[] = [
   {
     title: "AI Based Proctoring",
     href: "/docs/primitives/alert-dialog",
@@ -77,16 +107,18 @@ export function Header() {
         </NavigationMenuItem>
         {/* Online Examination */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Online Examination</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Online Examinations</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {onlineExaminationData.map((data) => (
-                <ListItem
-                  key={data.title}
-                  title={data.title}
-                  href={data.href}
-                >
+                <ListItem key={data.title} title={data.title} href={data.href}>
+                  {/* Map over the description array */}
                   {data.description}
+                  <ul>
+                    {data.listItems.map((desc, index) => (
+                      <li key={index}>{desc}</li>
+                    ))}
+                  </ul>
                 </ListItem>
               ))}
             </ul>
@@ -98,11 +130,7 @@ export function Header() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {remoteProctoringData.map((data) => (
-                <ListItem
-                  key={data.title}
-                  title={data.title}
-                  href={data.href}
-                >
+                <ListItem key={data.title} title={data.title} href={data.href}>
                   {data.description}
                 </ListItem>
               ))}
@@ -115,11 +143,7 @@ export function Header() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {howItWorksData.map((data) => (
-                <ListItem
-                  key={data.title}
-                  title={data.title}
-                  href={data.href}
-                >
+                <ListItem key={data.title} title={data.title} href={data.href}>
                   {data.description}
                 </ListItem>
               ))}
