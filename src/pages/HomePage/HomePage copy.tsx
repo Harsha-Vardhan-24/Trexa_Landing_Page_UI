@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Header } from "../../components/homepage/header/Header";
+import { Header } from "../../components/header/Header";
 import {
   Accordion,
   AccordionContent,
@@ -14,7 +14,7 @@ import google_logo from "../../assets/trusted_by/google_logo.png";
 import youtube_logo from "../../assets/trusted_by/youtube_logo.png";
 import prime_logo from "../../assets/trusted_by/prime_logo.png";
 import play_logo from "../../assets/trusted_by/play_logo.png";
-import { Footer } from "@/components/homepage/footer/Footer";
+import { Footer } from "@/components/footer/Footer";
 
 export const HomePage = () => {
   const IMAGES_ARR = [

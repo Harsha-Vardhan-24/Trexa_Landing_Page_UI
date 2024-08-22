@@ -1,4 +1,4 @@
-import IMAGE_LINK from "../../../assets/TrExa.png";
+import IMAGE_LINK from "../../assets/TrExa.png";
 
 export const Footer = () => {
   const CURRENT_YEAR = new Date().getFullYear();
