@@ -7,6 +7,9 @@ import { Examinationplatform } from "./pages/examinationSolution/Examinationplat
 import { SemesterExamPlatform } from "./pages/examinationSolution/SemesterExamPlatform";
 import { EntranceExam } from "./pages/examinationSolution/EntranceExam";
 import { OnlineEvaulationSystem } from "./pages/examinationSolution/OnlineEvaulationSystem";
+import { SecureProctor } from "./pages/examinationSolution/SecureProctor";
+import { OnlineCertPlatform } from "./pages/examinationSolution/OnlineCertificationPlatform";
+import { PsychometricTesting } from "./pages/hiringAndL&D/PsychometricTesting";
 
 function App() {
   const router = createBrowserRouter([
@@ -37,6 +40,17 @@ function App() {
         {
           path: "/onlineevaulationsystem",
           element: <OnlineEvaulationSystem />,
+        },
+        {
+          path: "/secureproctor",
+          element: <SecureProctor />,
+        },
+        {
+          path: "/onlinecertplatform",
+          element: <OnlineCertPlatform />,
+        },        {
+          path: "/psychometrictesting",
+          element: <PsychometricTesting />,
         },
       ],
     },

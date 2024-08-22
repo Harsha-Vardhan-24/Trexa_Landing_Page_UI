@@ -11,7 +11,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
-import { PiExam } from "react-icons/pi";
 import { Card } from "../ui/card";
 
 const onlineExaminationData: {
@@ -110,7 +109,7 @@ const howItWorksData: {
 export function Header() {
   return (
     <Card className="px-8 py-2">
-      <NavigationMenu className="mx-auto">
+      <NavigationMenu>
         <NavigationMenuList>
           {/* Logo */}
           <NavigationMenuItem>
@@ -185,18 +184,13 @@ export function Header() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          {/* Cert Platform */}
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Certification Platform
-            </NavigationMenuLink>
-          </NavigationMenuItem>
           {/* Pricing */}
           <NavigationMenuItem>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Pricing
             </NavigationMenuLink>
           </NavigationMenuItem>
+          {/* Schedule Demo */}
           <NavigationMenuItem>
             <Button>Schedule Demo</Button>
           </NavigationMenuItem>
