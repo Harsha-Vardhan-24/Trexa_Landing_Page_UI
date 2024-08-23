@@ -312,7 +312,7 @@ export function Header() {
 
           {/* Mobile Menu Items */}
           {menuToggle && (
-            <div className="lg:hidden fixed inset-0 h-[1200px] z-50 py-4 px-6">
+            <div className="lg:hidden fixed inset-0 h-[1200px] z-50 py-4 px-6 bg-white">
               <div className="max-w-screen-md mx-auto h-auto">
                 <div>
                   <h1 className="text-2xl text-left font-semibold">Menu</h1>
