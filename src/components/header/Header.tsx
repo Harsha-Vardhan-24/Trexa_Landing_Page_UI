@@ -15,7 +15,6 @@ import { Card } from "../ui/card";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { LuMenu } from "react-icons/lu";
 import { IoIosClose } from "react-icons/io";
-import { title } from "process";
 
 const onlineExaminationData: {
   title: string;
@@ -193,7 +192,7 @@ export function Header() {
           </NavigationMenuItem>
 
           {/* Menu Toggle Button */}
-          <div className="lg:hidden flex items-center justify-end">
+          <div className="lg:hidden flex items-center justifu-center md:justify-end">
             <button
               className="border border-solid border-slate-100 rounded-lg p-2"
               onClick={() => setMenuToggle(!menuToggle)}
@@ -313,82 +312,94 @@ export function Header() {
 
           {/* Mobile Menu Items */}
           {menuToggle && (
-            <div className="lg:hidden fixed inset-0 bg-white h-auto z-50 py-4 px-6">
-              <div>
-                <h1 className="text-2xl text-left font-semibold">Menu</h1>
+            <div className="lg:hidden fixed inset-0 bg-green-100 h-[1200px] z-50 py-4 px-6">
+              <div className="max-w-screen-md mx-auto h-auto bg-red-100">
+                <div>
+                  <h1 className="text-2xl text-left font-semibold">Menu</h1>
+                </div>
+                <button
+                  className="border border-solid border-slate-100 rounded-lg p-2 absolute top-4 right-4 text-2xl"
+                  onClick={() => setMenuToggle(false)}
+                >
+                  <IoIosClose />
+                </button>
+                <ul className="flex flex-col grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
+                  {/* List out your menu items here for mobile view */}
+                  <NavigationMenuItem className="flex flex-col gap-4">
+                    {onlineExaminationData.map((data, index) => (
+                      <NavigationMenuItem
+                        key={index}
+                        className="flex flex-col text-slate-500 items-start font-semibold"
+                      >
+                        <NavigationMenuLink href={data?.href}>
+                          {data.title}
+                        </NavigationMenuLink>
+                        <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                          {data.listItems?.map((list, index) => (
+                            <li>
+                              <NavigationMenuLink key={index} href={list?.link}>
+                                {list?.name}
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuItem>
+                    ))}
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="flex flex-col gap-4">
+                    {remoteProctoringData.map((data, index) => (
+                      <NavigationMenuItem
+                        key={index}
+                        className="flex flex-col text-slate-500 items-start font-semibold"
+                      >
+                        <NavigationMenuLink href={data?.href}>
+                          {data.title}
+                        </NavigationMenuLink>
+                        <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                          {data.listItems?.map((list, index) => (
+                            <li>
+                              <NavigationMenuLink key={index} href={list?.link}>
+                                {list?.name}
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuItem>
+                    ))}
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="flex flex-col gap-4">
+                    {howItWorksData.map((data, index) => (
+                      <NavigationMenuItem
+                        key={index}
+                        className="flex flex-col text-slate-500 items-start font-semibold"
+                      >
+                        <NavigationMenuLink href={data?.href}>
+                          {data.title}
+                        </NavigationMenuLink>
+                        <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                          {data.listItems?.map((list, index) => (
+                            <li>
+                              <NavigationMenuLink key={index} href={list?.link}>
+                                {list?.name}
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuItem>
+                    ))}
+                  </NavigationMenuItem>
+                  <NavigationMenuItem className="flex flex-col gap-4">
+                    <NavigationMenuItem className="flex flex-col text-slate-500 items-start font-semibold">
+                      <NavigationMenuLink href="/pricing">
+                        Pricing
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  </NavigationMenuItem>
+                  <div className="py-4 text-left">
+                    <Button>Schedule Demo</Button>
+                  </div>
+                </ul>
               </div>
-              <button
-                className="border border-solid border-slate-100 rounded-lg p-2 absolute top-4 right-4 text-2xl"
-                onClick={() => setMenuToggle(false)}
-              >
-                <IoIosClose />
-              </button>
-              <ul className="flex flex-col grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
-                {/* List out your menu items here for mobile view */}
-                <NavigationMenuItem className="flex flex-col gap-4">
-                  {onlineExaminationData.map((data, index) => (
-                    <NavigationMenuItem
-                      key={index}
-                      className="flex flex-col text-slate-500 items-start font-semibold"
-                    >
-                      <NavigationMenuLink href={data?.href}>
-                        {data.title}
-                      </NavigationMenuLink>
-                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
-                        {data.listItems?.map((list, index) => (
-                          <li>
-                            <NavigationMenuLink key={index} href={list?.link}>
-                              {list?.name}
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuItem>
-                <NavigationMenuItem className="flex flex-col gap-4">
-                  {remoteProctoringData.map((data, index) => (
-                    <NavigationMenuItem
-                      key={index}
-                      className="flex flex-col text-slate-500 items-start font-semibold"
-                    >
-                      <NavigationMenuLink href={data?.href}>
-                        {data.title}
-                      </NavigationMenuLink>
-                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
-                        {data.listItems?.map((list, index) => (
-                          <li>
-                            <NavigationMenuLink key={index} href={list?.link}>
-                              {list?.name}
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuItem>
-                <NavigationMenuItem className="flex flex-col gap-4">
-                  {howItWorksData.map((data, index) => (
-                    <NavigationMenuItem
-                      key={index}
-                      className="flex flex-col text-slate-500 items-start font-semibold"
-                    >
-                      <NavigationMenuLink href={data?.href}>
-                        {data.title}
-                      </NavigationMenuLink>
-                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
-                        {data.listItems?.map((list, index) => (
-                          <li>
-                            <NavigationMenuLink key={index} href={list?.link}>
-                              {list?.name}
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuItem>
-              </ul>
             </div>
           )}
 
