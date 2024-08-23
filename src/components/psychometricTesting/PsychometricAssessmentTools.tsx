@@ -13,11 +13,17 @@ export const PsychometricAssessmentTools = () => {
     <Card className="px-4 py-6 my-8 shadow-lg">
       <CardHeader className="py-6 ">
         <CardTitle className="text-2xl font-semibold px-16">
-          Psychometric Assessment Tools Used in Hiring and Employee Development
+          Psychometric Tests at Trexa
         </CardTitle>
         <CardDescription>
-          Make Better Hiring Decisions Using the Four Types of Psychometric
-          Assessment Tools
+          Unlock Deeper Insights with Psychometric Testing At Trexa, we
+          understand that hiring the right talent goes beyond technical skills.
+          That’s why we offer comprehensive psychometric tests to assess
+          candidates’ personality traits, cognitive abilities, and emotional
+          intelligence. Our psychometric assessments are designed to provide you
+          with a holistic view of your candidates, ensuring that you not only
+          find someone who fits the role but also aligns with your company’s
+          culture.
         </CardDescription>
       </CardHeader>
       <div className="grid grid-cols-4 gap-4">
