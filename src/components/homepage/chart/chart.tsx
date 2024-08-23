@@ -28,13 +28,16 @@ export function Chart({ sliderValue }: CharProps) {
   const chartData = [
     {
       month: "Cost",
-      traditional: sliderValue[0] * 4,
-      trexa: sliderValue[0] * 2,
+      traditional: sliderValue[0] * 4.3,
+      trexa: sliderValue[0] * 1.2,
     },
   ];
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-[150px] md:min-h-[300px] w-full">
+    <ChartContainer
+      config={chartConfig}
+      className="min-h-[150px] md:min-h-[300px] w-full"
+    >
       <BarChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} />
         <XAxis

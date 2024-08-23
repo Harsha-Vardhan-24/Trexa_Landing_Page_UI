@@ -16,6 +16,8 @@ import { TechnicalTesting } from "./pages/hiringAndL&D/TechnicalTesting";
 import { ComingSoon } from "./components/common/ComingSoon";
 import { FeedbackTool } from "./pages/tools/FeedbackTool";
 import { Tools } from "./pages/howItWorks/Tools";
+import { Technology } from "./pages/howItWorks/Technology";
+import { Pricing } from "./pages/pricing/Pricing";
 
 function App() {
   const router = createBrowserRouter([
@@ -106,6 +108,14 @@ function App() {
         {
           path: "/tools",
           element: <Tools />,
+        },
+        {
+          path: "/technology",
+          element: <Technology />,
+        },
+        {
+          path: "/pricing",
+          element: <Pricing />,
         },
       ],
     },

@@ -12,12 +12,16 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
+import { LiaRupeeSignSolid } from "react-icons/lia";
+import { LuMenu } from "react-icons/lu";
+import { IoIosClose } from "react-icons/io";
+import { title } from "process";
 
 const onlineExaminationData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: (string | { name: string; link: string })[];
+  listItems?: { name: string; link: string }[];
 }[] = [
   {
     title: "Online Examination Solution",
@@ -61,7 +65,7 @@ const remoteProctoringData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: (string | { name: string; link: string })[];
+  listItems?: { name: string; link: string }[];
 }[] = [
   {
     title: "Talent Assessments",
@@ -155,7 +159,7 @@ const howItWorksData: {
   title: string;
   href?: string;
   description: string;
-  listItems?: (string | { name: string; link: string })[];
+  listItems?: { name: string; link: string }[];
 }[] = [
   {
     title: "Tools",
@@ -172,107 +176,224 @@ const howItWorksData: {
 ];
 
 export function Header() {
+  const [menuToggle, setMenuToggle] = React.useState<boolean>(false);
+
   return (
-    <Card className="px-8 py-2">
-      <NavigationMenu>
-        <NavigationMenuList>
+    <Card className="p-2">
+      <NavigationMenu className="relative w-full">
+        <NavigationMenuList className="grid items-center grid-cols-3 lg:grid-cols-5 gap-2">
           {/* Logo */}
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuItem className="flex justify-start col-span-1">
+            <NavigationMenuLink
+              href="/"
+              className={navigationMenuTriggerStyle()}
+            >
               <img src={Trexa_Logo} alt="Trexa Logo" className="h-6" />
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Online Examination */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Online Examinations</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {onlineExaminationData.map((data) => (
-                  <ListItem
-                    key={data.title}
-                    title={data.title}
-                    href={data.href}
-                  >
-                    {/* Map over the description array */}
-                    {data.description}
-                    <ul>
-                      {data.listItems?.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          href={
-                            typeof item === "string" ? "#" : item.link || "#"
-                          }
-                          className="p-0"
-                        >
-                          <div className="text-black font-normal">
-                            {typeof item === "string" ? item : item.name}
-                          </div>
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </ListItem>
-                ))}
+
+          {/* Menu Toggle Button */}
+          <div className="lg:hidden flex items-center justify-end">
+            <button
+              className="border border-solid border-slate-100 rounded-lg p-2"
+              onClick={() => setMenuToggle(!menuToggle)}
+            >
+              <LuMenu />
+            </button>
+          </div>
+
+          {/* Desktop Menu Items */}
+          <div
+            className={`hidden lg:flex items-center col-span-3 gap-2 ${
+              menuToggle ? "block" : "hidden"
+            }`}
+          >
+            {/* Online Examination */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-normal hover:font-semibold active:font-semibold aria-[expanded='true']:font-semibold">
+                Online Examinations
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {onlineExaminationData.map((data) => (
+                    <div className="flex gap-2 items-start" key={data.title}>
+                      <div className="border border-solid border-slate-100 rounded-lg p-2 text-xl flex items-center justify-center">
+                        <LiaRupeeSignSolid />
+                      </div>
+                      <ListItem title={data.title} href={data.href}>
+                        {data.description}
+                        {data.listItems?.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            href={
+                              typeof item === "string" ? "#" : item.link || "#"
+                            }
+                            className="p-0"
+                          >
+                            <ul className="flex flex-col pl-4 list-disc gap-2">
+                              <li className="font-semibold hover:text-black">
+                                {typeof item === "string" ? item : item.name}
+                              </li>
+                            </ul>
+                          </ListItem>
+                        ))}
+                      </ListItem>
+                    </div>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* Remote Proctoring */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-normal hover:font-semibold active:font-semibold aria-[expanded='true']:font-semibold">
+                Hiring AND L&D
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {remoteProctoringData.map((data) => (
+                    <div className="flex gap-2 items-start" key={data.title}>
+                      <div className="border border-solid border-slate-100 rounded-lg p-2 text-xl flex items-center justify-center">
+                        <LiaRupeeSignSolid />
+                      </div>
+                      <ListItem title={data.title} href={data.href}>
+                        {data.description}
+                        {data.listItems?.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            href={
+                              typeof item === "string" ? "#" : item.link || "#"
+                            }
+                            className="p-0"
+                          >
+                            <ul className="flex flex-col pl-4 list-disc gap-2">
+                              <li className="font-semibold hover:text-black">
+                                {typeof item === "string" ? item : item.name}
+                              </li>
+                            </ul>
+                          </ListItem>
+                        ))}
+                      </ListItem>
+                    </div>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* How it Works */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="font-normal hover:font-semibold active:font-semibold aria-[expanded='true']:font-semibold">
+                How It Works
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {howItWorksData.map((data) => (
+                    <div className="flex gap-2 items-start" key={data.title}>
+                      <div className="border border-solid border-slate-100 rounded-lg p-2 text-xl flex items-center justify-center">
+                        <LiaRupeeSignSolid />
+                      </div>
+                      <ListItem title={data.title} href={data.href}>
+                        {data.description}
+                      </ListItem>
+                    </div>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* Pricing */}
+            <NavigationMenuItem className="cursor-pointer">
+              <NavigationMenuLink
+                className={`${navigationMenuTriggerStyle()} font-normal hover:font-semibold active:font-semibold`}
+              >
+                Pricing
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </div>
+
+          {/* Mobile Menu Items */}
+          {menuToggle && (
+            <div className="lg:hidden fixed inset-0 bg-white h-auto z-50 py-4 px-6">
+              <div>
+                <h1 className="text-2xl text-left font-semibold">Menu</h1>
+              </div>
+              <button
+                className="border border-solid border-slate-100 rounded-lg p-2 absolute top-4 right-4 text-2xl"
+                onClick={() => setMenuToggle(false)}
+              >
+                <IoIosClose />
+              </button>
+              <ul className="flex flex-col grid grid-cols-1 md:grid-cols-2 gap-4 py-6">
+                {/* List out your menu items here for mobile view */}
+                <NavigationMenuItem className="flex flex-col gap-4">
+                  {onlineExaminationData.map((data, index) => (
+                    <NavigationMenuItem
+                      key={index}
+                      className="flex flex-col text-slate-500 items-start font-semibold"
+                    >
+                      <NavigationMenuLink href={data?.href}>
+                        {data.title}
+                      </NavigationMenuLink>
+                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                        {data.listItems?.map((list, index) => (
+                          <li>
+                            <NavigationMenuLink key={index} href={list?.link}>
+                              {list?.name}
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuItem>
+                <NavigationMenuItem className="flex flex-col gap-4">
+                  {remoteProctoringData.map((data, index) => (
+                    <NavigationMenuItem
+                      key={index}
+                      className="flex flex-col text-slate-500 items-start font-semibold"
+                    >
+                      <NavigationMenuLink href={data?.href}>
+                        {data.title}
+                      </NavigationMenuLink>
+                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                        {data.listItems?.map((list, index) => (
+                          <li>
+                            <NavigationMenuLink key={index} href={list?.link}>
+                              {list?.name}
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuItem>
+                <NavigationMenuItem className="flex flex-col gap-4">
+                  {howItWorksData.map((data, index) => (
+                    <NavigationMenuItem
+                      key={index}
+                      className="flex flex-col text-slate-500 items-start font-semibold"
+                    >
+                      <NavigationMenuLink href={data?.href}>
+                        {data.title}
+                      </NavigationMenuLink>
+                      <ul className="flex flex-col text-black items-start pl-4 list-disc gap-2">
+                        {data.listItems?.map((list, index) => (
+                          <li>
+                            <NavigationMenuLink key={index} href={list?.link}>
+                              {list?.name}
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuItem>
               </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          {/* Remote Proctoring */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Hiring AND L&D</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {remoteProctoringData.map((data) => (
-                  <ListItem
-                    key={data.title}
-                    title={data.title}
-                    href={data.href}
-                  >
-                    {/* Map over the description array */}
-                    {data.description}
-                    <ul>
-                      {data.listItems?.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          href={
-                            typeof item === "string" ? "#" : item.link || "#"
-                          }
-                          className="p-0"
-                        >
-                          <div className="text-black font-normal">
-                            {typeof item === "string" ? item : item.name}
-                          </div>
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          {/* How it Works */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>How It Works</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {howItWorksData.map((data) => (
-                  <ListItem
-                    key={data.title}
-                    title={data.title}
-                    href={data.href}
-                  >
-                    {data.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          {/* Pricing */}
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Pricing
-            </NavigationMenuLink>
-          </NavigationMenuItem>
+            </div>
+          )}
+
           {/* Schedule Demo */}
-          <NavigationMenuItem>
+          <NavigationMenuItem className="col-span-1 flex justify-end">
             <Button>Schedule Demo</Button>
           </NavigationMenuItem>
         </NavigationMenuList>
