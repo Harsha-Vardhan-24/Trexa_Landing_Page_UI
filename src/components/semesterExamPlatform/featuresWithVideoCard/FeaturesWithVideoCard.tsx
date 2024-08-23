@@ -16,8 +16,8 @@ export const FeaturesWithVideoCard = () => {
           Virtual Semester Exams
         </CardTitle>
       </CardHeader>
-      <CardContent className="grid grid-cols-2 gap-2">
-        <div className="grid grid-cols-2 gap-4">
+      <CardContent className="grid grid-cols-1 md:grid-cols-2  gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
           {Array.from({ length: 4 }).map((_, index) => (
             <Card key={index}>
               <CardHeader className="text-left">
@@ -32,7 +32,7 @@ export const FeaturesWithVideoCard = () => {
             </Card>
           ))}
         </div>
-        <div className="bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
+        <div className="order-first md:order-last min-h-[300px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
       </CardContent>
     </Card>
   );

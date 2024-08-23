@@ -9,7 +9,7 @@ export const DashBoardWithBenifits = () => {
         Real-time Dashboards for Evaluators and Administrators For A Seamless
         Digital Evaluation
       </CardTitle>
-      <div className="grid grid-cols-2 items-center gap-4 text-left p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 text-left p-4">
         <div>
           <h1 className="text-xl font-semibold">Dashboards for Evaluators</h1>
           <div className="pt-4">
@@ -25,9 +25,9 @@ export const DashBoardWithBenifits = () => {
             </div>
           </div>
         </div>
-        <div className="min-h-[300px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
+        <div className="order-first md:order-last min-h-[300px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
       </div>
-      <div className="grid grid-cols-2 items-center gap-4 text-left p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 text-left p-4">
         <div className="min-h-[300px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
         <div>
           <h1 className="text-xl font-semibold">

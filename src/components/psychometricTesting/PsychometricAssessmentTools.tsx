@@ -26,7 +26,7 @@ export const PsychometricAssessmentTools = () => {
           culture.
         </CardDescription>
       </CardHeader>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {Array.from({ length: 4 }).map((_, index) => (
           <Card key={index} className="text-left p-2 shadow-sm">
             <CardHeader>

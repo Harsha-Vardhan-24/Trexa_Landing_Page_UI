@@ -14,7 +14,7 @@ export const CandidateFlagged = () => {
         <CardTitle>
           Candidates Are Flagged Or Interrupted In The Following Cases
         </CardTitle>
-        <CardContent className="grid grid-cols-4 gap-4 py-4">
+        <CardContent className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
           {Array.from({ length: 8 }).map((_, index) => (
             <Card key={index} className="shadow-sm">
               <CardContent className="flex gap-2 items-center text-left p-4">

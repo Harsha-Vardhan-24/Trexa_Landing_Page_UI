@@ -8,7 +8,7 @@ export const PricingKeyPoints = () => {
       <CardTitle className="py-6 text-2xl font-semibold px-16">
         Pricing details
       </CardTitle>
-      <div className="grid grid-cols-2 items-center gap-4 text-left p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 text-left p-4">
         <div className="min-h-[300px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></div>
         <div>
           <div className="pt-4">

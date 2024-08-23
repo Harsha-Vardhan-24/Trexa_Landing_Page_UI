@@ -9,14 +9,14 @@ export const MultiProctorFeatures = () => {
         <h1 className="text-2xl text-center font-semibold">
           We Provide Best-in-Class Proctoring Features To Ensure Secure Exams
         </h1>
-        <div className="grid grid-cols-3 gap-4">
-          <Card className="shadow-lg my-16 flex gap-4 col-span-3 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="shadow-lg my-16 flex flex-wrap items-center justify-center gap-4 col-span-1 md:col-span-3 p-4">
             {Array.from({ length: 4 }).map((_, index) => (
               <div key={index} className="flex flex-col items-center gap-2">
-                <div className="text-4xl">
+                <div className="text-4xl md:text-4xl">
                   <BsShield />
                 </div>
-                <h1 className="font-semibold text-xl">
+                <h1 className="font-semibold text-md md:text-xl">
                   Robust Candidate Authentication
                 </h1>
               </div>

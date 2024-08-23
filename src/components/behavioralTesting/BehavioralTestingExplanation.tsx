@@ -22,7 +22,10 @@ export const BehavioralTestingExplanation = () => {
           Online Behavioral Tools
         </h1>
         {Array.from({ length: 3 }).map((_, index) => (
-          <Card key={index} className="text-left p-4 shadow-sm">
+          <Card
+            key={index}
+            className="text-left p-4 shadow-sm col-span-3 md:col-span-1"
+          >
             <CardHeader>
               <div className="text-4xl">
                 <CiChat2 />
@@ -41,7 +44,10 @@ export const BehavioralTestingExplanation = () => {
           Offline Behavioral Tools
         </h1>
         {Array.from({ length: 3 }).map((_, index) => (
-          <Card key={index} className="text-left p-4 shadow-sm">
+          <Card
+            key={index}
+            className="text-left p-4 shadow-sm col-span-3 md:col-span-1"
+          >
             <CardHeader>
               <div className="text-4xl">
                 <CiChat2 />

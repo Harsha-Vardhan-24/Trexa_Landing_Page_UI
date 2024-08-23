@@ -27,8 +27,8 @@ export const TechnicalTestingMultiFeature = () => {
             <TabsTrigger value="roles">Roles</TabsTrigger>
           </TabsList>
           <TabsContent value="functions">
-            <Card className="grid grid-cols-2 p-4">
-              <CardContent className="bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
+            <Card className="grid grid-cols-1 md:grid-cols-2 p-4">
+              <CardContent className="min-h-[200px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
               <CardContent className="flex flex-col gap-4">
                 {Array.from({ length: 4 }).map((_, index) => (
                   <div key={index} className="flex items-center gap-2">

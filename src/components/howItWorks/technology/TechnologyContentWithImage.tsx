@@ -1,8 +1,8 @@
 export const TechnologyContentWithImage = () => {
   return (
     <section className="grid grid-cols-5 gap-4 items-center px-4 py-6 my-8">
-      <div className="min-h-[350px]  bg-slate-500/30 backdrop-blur-sm rounded-lg col-span-3"></div>
-      <div className="col-span-2 py-8 text-left px-8">
+      <div className="min-h-[350px]  bg-slate-500/30 backdrop-blur-sm rounded-lg col-span-5 md:col-span-3"></div>
+      <div className="col-span-5 md:col-span-2 py-8 text-left px-8">
         <h1 className="text-xl font-semibold">
           Served millions of students, worldwide since 2016
         </h1>

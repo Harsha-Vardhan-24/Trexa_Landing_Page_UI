@@ -10,7 +10,7 @@ export const OnlineCertProcess = () => {
           Manage End-to-End Certification Programs with the Top Certification
           Management Software
         </h1>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="flex items-center gap-2">
               <Card className="shadow-lg my-16 flex flex-col gap-2 p-2">

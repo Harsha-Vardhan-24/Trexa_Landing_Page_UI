@@ -12,7 +12,7 @@ export const WhyEntranceExamTrexa = () => {
   return (
     <Card className="px-4 py-6 my-8 shadow-lg">
       <CardHeader>
-        <CardTitle className="font-bold tracking-tighter">
+        <CardTitle className="font-bold tracking-tight">
           Why Man2Web | TrExa Is The Best Partner For Your Virtual Entrance
           Examination Needs
         </CardTitle>

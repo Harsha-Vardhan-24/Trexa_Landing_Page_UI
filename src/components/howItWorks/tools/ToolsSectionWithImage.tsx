@@ -1,8 +1,8 @@
 export const ToolsSectionWithImage = () => {
   return (
     <section className="my-16 grid grid-cols-3 gap-4 items-center">
-      <div className="min-h-[250px] bg-slate-500/30 backdrop-blur-sm rounded-lg col-span-1"></div>
-      <div className="col-span-2 py-8 text-left px-8 flex flex-col gap-2">
+      <div className="min-h-[250px] bg-slate-500/30 backdrop-blur-sm rounded-lg col-span-3 md:col-span-1"></div>
+      <div className="col-span-3 md:col-span-2 py-8 text-left px-8 flex flex-col gap-2">
         <h1 className="text-xl font-semibold">
           Discover how an online assessment platform can benefit your school
         </h1>

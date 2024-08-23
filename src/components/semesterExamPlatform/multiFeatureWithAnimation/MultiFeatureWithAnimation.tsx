@@ -20,7 +20,7 @@ export const MultiFeatureWithAnimation = () => {
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="autoProctor" className="w-full px-6">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full h-full grid-cols-1 md:grid-cols-3">
             <TabsTrigger value="autoProctor">Auto Proctor</TabsTrigger>
             <TabsTrigger value="liveProctor">Live Proctor</TabsTrigger>
             <TabsTrigger value="recordAndReviewProctor">
@@ -28,8 +28,8 @@ export const MultiFeatureWithAnimation = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="autoProctor">
-            <Card className="grid grid-cols-2 p-4">
-              <CardContent className="bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
+            <Card className="grid grid-cols-1 md:grid-cols-2 p-4">
+              <CardContent className="min-h-[200px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
               <CardContent className="flex flex-col gap-4">
                 {Array.from({ length: 4 }).map((_, index) => (
                   <div key={index} className="flex items-center gap-2">
@@ -45,8 +45,8 @@ export const MultiFeatureWithAnimation = () => {
             </Card>
           </TabsContent>
           <TabsContent value="liveProctor">
-            <Card className="grid grid-cols-2 p-4">
-              <CardContent className="bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
+            <Card className="grid grid-cols-1 md:grid-cols-2 p-4">
+              <CardContent className="min-h-[200px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
               <CardContent className="flex flex-col gap-4">
                 {Array.from({ length: 4 }).map((_, index) => (
                   <div key={index} className="flex items-center gap-2">
@@ -62,8 +62,8 @@ export const MultiFeatureWithAnimation = () => {
             </Card>
           </TabsContent>
           <TabsContent value="recordAndReviewProctor">
-            <Card className="grid grid-cols-2 p-4">
-              <CardContent className="bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
+            <Card className="grid grid-cols-1 md:grid-cols-2 p-4">
+              <CardContent className="min-h-[200px] bg-slate-500/30 backdrop-blur-sm rounded-lg"></CardContent>
               <CardContent className="flex flex-col gap-4">
                 {Array.from({ length: 4 }).map((_, index) => (
                   <div key={index} className="flex items-center gap-2">

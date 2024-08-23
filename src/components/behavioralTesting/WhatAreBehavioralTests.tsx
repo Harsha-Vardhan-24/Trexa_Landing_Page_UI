@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 export const WhatAreBehavioralTests = () => {
   return (
     <Card className="px-4 py-6 my-8 shadow-lg">
-      <div className="grid grid-cols-2 items-center gap-4 text-left p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 text-left p-4">
         <div>
           <h1 className="text-xl font-semibold">
             What Are Behavioral Assessments?

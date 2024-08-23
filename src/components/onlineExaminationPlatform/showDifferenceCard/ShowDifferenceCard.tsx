@@ -8,7 +8,7 @@ export const ShowDifferenceCard = () => {
   return (
     <Card className="px-4 py-6 my-8 shadow-lg">
       <CardContent>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
           <div>
             <div className="flex items-center justify-center gap-2 py-2">
               <div>

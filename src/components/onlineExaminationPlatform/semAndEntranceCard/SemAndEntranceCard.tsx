@@ -15,7 +15,7 @@ export const SemAndEntranceCard = () => {
         We Conduct Virtual Semester and Entrance Exams Worldwide, Using Our
         Robust Online Exam Platform
       </h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card className="text-left p-2 shadow-lg">
           <CardHeader>
             <CardTitle>Semester Exam Solution</CardTitle>
