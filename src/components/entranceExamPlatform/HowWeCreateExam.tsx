@@ -14,7 +14,7 @@ export const HowWeCreateExam = () => {
       <CardTitle className="py-6 text-2xl font-semibold px-16">
         How We Create Successful Online Entrance Exams For You
       </CardTitle>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {Array.from({ length: 4 }).map((_, index) => (
           <Card key={index} className="text-left p-2 shadow-sm">
             <CardHeader>

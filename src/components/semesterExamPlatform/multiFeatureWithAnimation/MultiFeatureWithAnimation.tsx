@@ -12,7 +12,7 @@ import { FaRegEye } from "react-icons/fa";
 
 export const MultiFeatureWithAnimation = () => {
   return (
-    <Card className="px-4 py-6 my-8 shadow-lg">
+    <Card className="md:px-4 py-6 my-8 shadow-lg">
       <CardHeader>
         <CardTitle>
           Our AI-Augmented Proctoring Ensures 95% accuracy in cheating detection

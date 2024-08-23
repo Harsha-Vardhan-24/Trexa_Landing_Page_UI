@@ -15,7 +15,7 @@ export const FeedbackNeeds = () => {
           One Solution For All Your 360-Degree Feedback Needs
         </CardTitle>
       </CardHeader>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {Array.from({ length: 4 }).map((_, index) => (
           <Card key={index} className="text-left p-2 shadow-sm">
             <CardHeader>

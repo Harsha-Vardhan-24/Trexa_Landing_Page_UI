@@ -17,7 +17,7 @@ export const FeaturesWithVideoCard = () => {
         </CardTitle>
       </CardHeader>
       <CardContent className="grid grid-cols-1 md:grid-cols-2  gap-2">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {Array.from({ length: 4 }).map((_, index) => (
             <Card key={index}>
               <CardHeader className="text-left">

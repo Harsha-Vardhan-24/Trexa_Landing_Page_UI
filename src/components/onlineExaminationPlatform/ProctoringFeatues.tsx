@@ -10,7 +10,7 @@ import { BsShield } from "react-icons/bs";
 
 export const ProctoringFeatues = () => {
   return (
-    <Card className="px-4 py-6 my-8 shadow-lg">
+    <Card className="md:px-4 py-6 my-8 shadow-lg">
       <CardHeader>
         <CardTitle className="font-bold tracking-tighter">
           Why Companies choose HyreNet for their Assessment

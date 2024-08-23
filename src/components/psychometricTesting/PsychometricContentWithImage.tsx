@@ -14,7 +14,7 @@ export const PsychometricContentWithImage = () => {
           competence, and motivations. There are two general types of
           psychometric testing: personality tests and aptitude tests.
         </p>
-        <div className="flex justify-start gap-2 pt-4">
+        <div className="hidden md:flex justify-start gap-2 pt-4">
           <div className="flex gap-6">
             <div className="flex gap-2 items-center">
               <div>

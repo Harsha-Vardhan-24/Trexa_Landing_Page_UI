@@ -9,7 +9,7 @@ import { FaRegEye } from "react-icons/fa";
 
 export const CandidateFlagged = () => {
   return (
-    <Card className="px-4 py-6 my-8 shadow-lg">
+    <Card className="md:px-4 py-6 my-8 shadow-lg">
       <CardHeader>
         <CardTitle>
           Candidates Are Flagged Or Interrupted In The Following Cases

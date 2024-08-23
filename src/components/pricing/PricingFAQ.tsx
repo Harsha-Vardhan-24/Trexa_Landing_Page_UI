@@ -14,7 +14,7 @@ export const PricingFAQ = () => {
           Frequently Asked Questions(FAQs)
         </h1>
         <div>
-          <Accordion type="single" collapsible className="w-full px-16 py-4">
+          <Accordion type="single" collapsible className="w-full md:px-16 py-4">
             <AccordionItem value="item-1">
               <AccordionTrigger>Exam Controllers</AccordionTrigger>
               <AccordionContent>
