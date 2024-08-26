@@ -37,7 +37,11 @@ export const EvalAccodion = () => {
           Processes
         </h1>
         <div>
-          <Accordion type="single" collapsible className="w-full lg:px-16 py-4">
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full lg:px-16 py-4 text-left"
+          >
             {ACCORD_DATA.map(
               (data: { question: string; answer: string }, index) => (
                 <AccordionItem
@@ -45,7 +49,9 @@ export const EvalAccodion = () => {
                   value={`item-${index + 1}`}
                   className="text-left"
                 >
-                  <AccordionTrigger>{data.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-left">
+                    {data.question}
+                  </AccordionTrigger>
                   <AccordionContent>{data.answer}</AccordionContent>
                 </AccordionItem>
               )

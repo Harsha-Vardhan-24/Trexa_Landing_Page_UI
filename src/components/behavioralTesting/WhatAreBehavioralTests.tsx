@@ -10,17 +10,13 @@ export const WhatAreBehavioralTests = () => {
           <h1 className="text-xl font-semibold">
             What Are Behavioral Assessments?
           </h1>
-          <div className="pt-4">
-            <div className="flex flex-col gap-4">
-              <p className="font-sm text-slate-500">
-                Behavioral Assessments Are New-Age Digital Tools to Measure
-                Behavioral Competencies in a Simulated Work Environment. These
-                assessments require candidates to demonstrate their Behavioral
-                skills in an activity that resembles an actual organizational
-                situation.
-              </p>
-            </div>
-          </div>
+          <p className="pt-4 text-sm text-slate-500">
+            Behavioral assessments are modern digital tools designed to evaluate
+            key behavioral competencies in a simulated work environment. These
+            assessments require candidates to showcase their behavioral skills
+            by engaging in activities that closely mirror real-life
+            organizational scenarios.
+          </p>
         </div>
         <div className="flex flex-col">
           <h1 className="text-lg text-center text-slate-500 font-semibold">
