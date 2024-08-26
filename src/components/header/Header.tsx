@@ -180,7 +180,7 @@ export function Header() {
   return (
     <Card className="p-2">
       <NavigationMenu className="relative w-full">
-        <NavigationMenuList className="w-full grid items-center grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
+        <NavigationMenuList className="w-full grid items-center grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-2">
           {/* Logo */}
           <NavigationMenuItem className="flex justify-start col-span-1">
             <NavigationMenuLink
@@ -192,7 +192,7 @@ export function Header() {
           </NavigationMenuItem>
 
           {/* Menu Toggle Button */}
-          <div className="lg:hidden md:col-span-3 flex items-center justify-end pr-10">
+          <div className="lg:hidden sm:col-span-3 md:col-span-4 flex items-center justify-end">
             <button
               className="border border-solid border-slate-100 rounded-lg p-2"
               onClick={() => setMenuToggle(!menuToggle)}
@@ -404,7 +404,7 @@ export function Header() {
           )}
 
           {/* Schedule Demo */}
-          <NavigationMenuItem className="col-span-1 flex justify-end">
+          <NavigationMenuItem className="hidden col-span-1 lg:flex justify-end">
             <Button>Schedule Demo</Button>
           </NavigationMenuItem>
         </NavigationMenuList>

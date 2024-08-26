@@ -3,7 +3,7 @@ import { Button } from "../../ui/button";
 export const Content = () => {
   return (
     <section className="my-16">
-      <div className="md:px-[16rem]">
+      <div className="md:px-[8rem] lg:px-[16rem]">
         <p className="text-center text-md font-medium tracking-tight text-slate-400">
           Sick of traditional way of conducting Assessment? <br />
           Try Creating a test with only a few clicks using TrExa.

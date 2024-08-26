@@ -6,9 +6,53 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { BsShield } from "react-icons/bs";
+import { IconType } from "react-icons";
+
+import { FaShieldAlt } from "react-icons/fa";
+import { BiCustomize } from "react-icons/bi";
+import { FaUserAlt } from "react-icons/fa";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaStackExchange } from "react-icons/fa";
+import { TbWorldLongitude } from "react-icons/tb";
+import { FaFileSignature } from "react-icons/fa6";
+import { MdOutlinePriceCheck } from "react-icons/md";
 
 export const WhyEntranceExamTrexa = () => {
+  const WHY_TREXA = [
+    {
+      icon: FaShieldAlt,
+      text: "Cutting-Edge Security",
+    },
+    {
+      icon: BiCustomize,
+      text: "Customizable Exam Formats",
+    },
+    {
+      icon: FaUserAlt,
+      text: "User-Friendly Interface",
+    },
+    {
+      icon: FaChalkboardTeacher,
+      text: "Real-Time Monitoring and Analytics",
+    },
+    {
+      icon: FaStackExchange,
+      text: "Instant Grading and Feedback",
+    },
+    {
+      icon: TbWorldLongitude,
+      text: "Scalable and Reliable",
+    },
+    {
+      icon: FaFileSignature,
+      text: "Eco-Friendly Solution",
+    },
+    {
+      icon: MdOutlinePriceCheck,
+      text: "Affordable Pricing",
+    },
+  ];
+
   return (
     <Card className="px-4 py-6 my-8 shadow-lg">
       <CardHeader>
@@ -19,15 +63,15 @@ export const WhyEntranceExamTrexa = () => {
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-2 md:grid-cols-4">
-          {Array.from({ length: 8 }).map((_, index) => {
+          {WHY_TREXA.map((reason: { icon: IconType; text: string }, index) => {
             return (
               <div key={index} className="p-4">
                 <div className="flex flex-col items-center">
                   <div className="p-2 text-4xl">
-                    <BsShield />
+                    <reason.icon />
                   </div>
                   <p className="text-sm font-semibold tracking-tight">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    {reason.text}
                   </p>
                 </div>
               </div>

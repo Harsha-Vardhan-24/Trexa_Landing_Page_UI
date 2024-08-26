@@ -1,3 +1,4 @@
+import { FaChalkboardTeacher, FaFileSignature, FaLaptop, FaRegUser, FaShieldAlt, FaStackExchange, FaUserAlt } from "react-icons/fa";
 import { Button } from "../ui/button";
 import {
   Card,
@@ -6,27 +7,64 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { BsShield } from "react-icons/bs";
+import { BiCustomize } from "react-icons/bi";
+import { TbAutomaticGearbox, TbWorldLongitude } from "react-icons/tb";
+import { MdOutlinePriceCheck } from "react-icons/md";
+import { IconType } from "react-icons";
 
 export const ProctoringFeatues = () => {
+  const WHY_TREXA = [
+    {
+      icon: FaShieldAlt,
+      text: "Top-Tier Security",
+    },
+    {
+      icon: BiCustomize,
+      text: "Flexible Exam Structures",
+    },
+    {
+      icon: FaRegUser,
+      text: "Intuitive User Interface",
+    },
+    {
+      icon: FaChalkboardTeacher,
+      text: "Real-Time Proctoring",
+    },
+    {
+      icon: TbAutomaticGearbox,
+      text: "Automatic Grading",
+    },
+    {
+      icon: TbWorldLongitude,
+      text: "Scalable for Any Class Size",
+    },
+    {
+      icon: FaLaptop ,
+      text: "Paperless Examination",
+    },
+    {
+      icon: MdOutlinePriceCheck,
+      text: "Cost-Effective Solution",
+    },
+  ];
   return (
     <Card className="md:px-4 py-6 my-8 shadow-lg">
       <CardHeader>
         <CardTitle className="font-bold tracking-tighter">
-          Why Companies choose HyreNet for their Assessment
+          Why Companies choose TrExa for their Assessment
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-2 md:grid-cols-4">
-          {Array.from({ length: 8 }).map((_, index) => {
+          {WHY_TREXA.map((reason: {icon: IconType, text: string}, index) => {
             return (
               <div key={index} className="p-4">
                 <div className="flex flex-col items-center">
                   <div className="p-2 text-4xl">
-                    <BsShield />
+                    <reason.icon />
                   </div>
                   <p className="text-sm font-semibold tracking-tight">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    {reason.text}
                   </p>
                 </div>
               </div>

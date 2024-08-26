@@ -23,9 +23,9 @@ export const ShowDifferenceCard = () => {
                 </div>
                 <CardContent className="flex flex-col gap-2 py-2 text-sm text-left">
                   <ul className="flex flex-col list-disc gap-2">
-                    <li>Create Question Paper</li>
-                    <li>Physical Invigilation</li>
-                    <li>Manual Grading</li>
+                    <li>Manually Create Question Paper</li>
+                    <li>Physical Invigilation Required</li>
+                    <li>Manual Grading Process</li>
                   </ul>
                 </CardContent>
               </div>
@@ -35,9 +35,9 @@ export const ShowDifferenceCard = () => {
                 </div>
                 <CardContent className="flex flex-col gap-2 py-2 text-sm text-left">
                   <ul className="flex flex-col list-disc gap-2">
-                    <li>Reach Center @ Fixed Date/Time</li>
-                    <li>Take Pen & Paper Exam</li>
-                    <li>Results After Months</li>
+                    <li>Travel to Exam Center</li>
+                    <li>Fixed Exam Date/Time</li>
+                    <li>Wait Months for Results</li>
                   </ul>
                 </CardContent>
               </div>
@@ -58,9 +58,9 @@ export const ShowDifferenceCard = () => {
                 </div>
                 <CardContent className="flex flex-col gap-2 py-2 text-sm text-left">
                   <ul className="flex flex-col list-disc gap-2">
-                    <li>Configure Online Exam</li>
-                    <li>Online Invigilation & Proctoring</li>
-                    <li>Automatic Grading</li>
+                    <li>Configure Exams Online</li>
+                    <li>Automated Invigilation & Proctoring</li>
+                    <li>Instant Grading & Feedback</li>
                   </ul>
                 </CardContent>
               </div>
@@ -70,8 +70,9 @@ export const ShowDifferenceCard = () => {
                 </div>
                 <CardContent className="flex flex-col gap-2 py-2 text-sm text-left">
                   <ul className="flex flex-col list-disc gap-2">
-                    <li>Take Exam Anytime, Anywhere</li>
-                    <li>Real-time Results</li>
+                    <li>Take Exams Anytime, Anywhere</li>
+                    <li>No Need to Travel</li>
+                    <li>Immediate Results</li>
                   </ul>
                 </CardContent>
               </div>

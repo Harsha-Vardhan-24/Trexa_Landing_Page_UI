@@ -1,22 +1,22 @@
+import { TitleCard } from "@/components/common/TitleCard";
 import { ProctoringFeatues } from "@/components/onlineExaminationPlatform/ProctoringFeatues";
 import { CandidateFlagged } from "@/components/semesterExamPlatform/candidateFlagged/CandidateFlagged";
 import { FeaturesWithVideoCard } from "@/components/semesterExamPlatform/featuresWithVideoCard/FeaturesWithVideoCard";
 import { MultiFeatureWithAnimation } from "@/components/semesterExamPlatform/multiFeatureWithAnimation/MultiFeatureWithAnimation";
 
 export const SemesterExamPlatform = () => {
+  const SEM_TITLE_DATA = {
+    title:
+      "Seamlessly Conduct Virtual Semester Exams with Our Advanced Proctoring Tools",
+    description:
+      "AI-Driven Proctoring | Streamlined Exam Management | Comprehensive Evaluations",
+  };
   return (
     <section>
-      <div className="my-20">
-        <h1 className="font-bold text-2xl md:text-4xl tracking-tight">
-          Conduct Virtual Semester Examinations With Our Industry-Leading
-          Proctoring Tools
-        </h1>
-        <p className="text-md pt-6 text-slate-500 font-semibold tracking-tight">
-          AI-Based Proctoring | Easy Exam Management | Structured Exam
-          Evaluations
-        </p>
-      </div>
-
+      <TitleCard
+        title={SEM_TITLE_DATA.title}
+        description={SEM_TITLE_DATA.description}
+      />
       <FeaturesWithVideoCard />
       <MultiFeatureWithAnimation />
       <h1 className="py-12 font-semibold text-2xl md:text-2xl tracking-tight">

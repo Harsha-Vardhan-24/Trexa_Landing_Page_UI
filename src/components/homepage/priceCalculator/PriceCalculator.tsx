@@ -7,29 +7,30 @@ import {
 } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { useState } from "react";
-import { LiaRupeeSignSolid } from "react-icons/lia";
 import { Chart } from "../chart/chart";
-import { BsCardList, BsLink45Deg, BsQuestionLg } from "react-icons/bs";
 import { Button } from "../../ui/button";
+import { MdNaturePeople } from "react-icons/md";
+import { HiOutlineUsers } from "react-icons/hi2";
+import { FaRegMoneyBillAlt } from "react-icons/fa";
 
 export const PriceCalculator = () => {
   const [sliderValue, setSliderValue] = useState<number[]>([20]);
-  const ICONS = [BsCardList, BsQuestionLg, BsLink45Deg];
+  const ICONS = [HiOutlineUsers, MdNaturePeople, FaRegMoneyBillAlt];
   const FEAT_DETAILS = [
     {
-      question: "Create your own Template",
+      question: "Flexibility for Users",
       content:
-        "Customize Questions in your Template according to your needs. Import your questions through CSV.",
+        "Take exams anywhere with Trexa—just an internet connection and laptop needed.",
     },
     {
-      question: "Choose Your Question",
+      question: "Eco-Friendly Testing",
       content:
-        "Handpick your Questions based on the Easy/Medium/Hard category. Shuffle Questions to each candidates.",
+        "Conduct exams online with Trexa and reduce your environmental impact.",
     },
     {
-      question: "Test Link Generation",
+      question: "Superior Experience at a Lower Cost",
       content:
-        "Generated test link in Public/ Private and Protected Category to improve security for your assessment ",
+        "Enjoy premium testing at half the cost, You can check approx pricing using the Trexa's price calculator.",
     },
   ];
   return (
@@ -37,7 +38,7 @@ export const PriceCalculator = () => {
       <Card className="backdrop-blur-sm bg-white/30">
         <CardHeader>
           <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
-            <LiaRupeeSignSolid />
+            <FaRegMoneyBillAlt />
           </div>
           <CardTitle className="font-bold tracking-tighter">
             Compare the pricing with the traditional method

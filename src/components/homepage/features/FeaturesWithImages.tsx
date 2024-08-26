@@ -6,8 +6,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { BsCardList, BsLink45Deg, BsQuestionLg } from "react-icons/bs";
-import { CiHeart } from "react-icons/ci";
 import { Button } from "../../ui/button";
+import { CiBoxList } from "react-icons/ci";
+import Feat_SVG from "../../../assets/illustrations/Feat_SVG.svg";
 
 export const FeaturesWithImages = () => {
   const ICONS = [BsCardList, BsQuestionLg, BsLink45Deg];
@@ -33,14 +34,12 @@ export const FeaturesWithImages = () => {
       <Card className="backdrop-blur-sm bg-white/30">
         <CardHeader>
           <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
-            <CiHeart />
+            <CiBoxList />
           </div>
-          <CardTitle className="font-bold tracking-tighter">
-            Lorem Ipsum
-          </CardTitle>
+          <CardTitle className="font-bold tracking-tighter">Features</CardTitle>
         </CardHeader>
         <CardContent className="grid md:grid-cols-2">
-          <div className="bg-slate-500/30 backdrop-blur-sm h-[300px] rounded-lg"></div>
+          <img src={Feat_SVG} className="h-auto" />
           <div className="">
             {FEAT_DETAILS.map(
               (feature: { question: string; content: string }, index) => {

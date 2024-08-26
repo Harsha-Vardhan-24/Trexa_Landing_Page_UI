@@ -5,7 +5,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BsCardChecklist, BsShield } from "react-icons/bs";
+import { BsCardChecklist } from "react-icons/bs";
+import { FaRegHandshake } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoFingerPrintOutline } from "react-icons/io5";
@@ -65,7 +66,7 @@ export const ExamFeatures = () => {
       <Card className="backdrop-blur-sm bg-white/30">
         <CardHeader>
           <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
-            <BsShield />
+            <FaRegHandshake />
           </div>
           <CardTitle className="font-bold tracking-tighter">
             Why Companies choose HyreNet for their Assessment

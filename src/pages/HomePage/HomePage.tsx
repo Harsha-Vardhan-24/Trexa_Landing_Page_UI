@@ -5,16 +5,10 @@ import { NumbersSection } from "@/components/homepage/features/NumbersSection";
 import { Content } from "@/components/homepage/content/Content";
 import { ExamFeatures } from "@/components/homepage/features/ExamFeatures";
 import { PriceCalculator } from "@/components/homepage/priceCalculator/PriceCalculator";
-import { ProfileForm } from "@/components/homepage/form/ProfileForm";
-import { useState } from "react";
 
 export const HomePage = () => {
-  const [toggleForm, setToggleForm] = useState<boolean>(false);
-
   return (
     <main>
-      {toggleForm && <ProfileForm setToggleForm={setToggleForm} />}
-
       <Title />
       <TrustedBy />
       <NumbersSection />
