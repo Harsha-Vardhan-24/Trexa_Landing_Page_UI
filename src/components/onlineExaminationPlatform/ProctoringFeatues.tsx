@@ -1,4 +1,4 @@
-import { FaChalkboardTeacher, FaFileSignature, FaLaptop, FaRegUser, FaShieldAlt, FaStackExchange, FaUserAlt } from "react-icons/fa";
+import { FaChalkboardTeacher, FaLaptop, FaRegUser, FaShieldAlt } from "react-icons/fa";
 import { Button } from "../ui/button";
 import {
   Card,
