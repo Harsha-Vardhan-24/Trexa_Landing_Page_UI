@@ -8,22 +8,13 @@ import {
   CardTitle,
 } from "../ui/card";
 
-import { BsCodeSquare, BsShield } from "react-icons/bs";
-import {
-  FaGraduationCap,
-  FaLaptopCode,
-  FaChalkboardTeacher,
-  FaRegBuilding,
-  FaHeartbeat,
-  FaGavel,
-  FaTools,
-  FaLeaf,
-} from "react-icons/fa";
+import { BsCodeSquare } from "react-icons/bs";
 import { HiOutlineAcademicCap } from "react-icons/hi2";
 import { PiChalkboardTeacher } from "react-icons/pi";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { GrTools } from "react-icons/gr";
 import { GoTools } from "react-icons/go";
+import { FaRegBuilding } from "react-icons/fa";
 
 export const OnlineCertFeaturesList = () => {
   const CERTIFICATION_TYPES = [

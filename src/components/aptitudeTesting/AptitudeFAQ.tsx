@@ -1,4 +1,3 @@
-import { BsShield } from "react-icons/bs";
 import {
   Accordion,
   AccordionContent,
