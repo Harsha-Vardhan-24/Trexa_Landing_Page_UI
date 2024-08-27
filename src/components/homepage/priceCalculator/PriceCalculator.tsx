@@ -40,6 +40,9 @@ export const PriceCalculator = () => {
     <section className="my-16">
       <Card className="backdrop-blur-sm bg-white/30">
         <CardHeader>
+          <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
+            <TbMoneybag />
+          </div>
           <CardTitle className="font-bold tracking-tighter">
             Compare the pricing with the traditional method
           </CardTitle>
