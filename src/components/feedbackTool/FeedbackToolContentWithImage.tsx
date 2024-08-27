@@ -1,16 +1,19 @@
+import FEEDBACK_SVG from "../../assets/illustrations/FEEDBACK_SVG.svg";
+
 export const FeedbackToolContentWithImage = () => {
   return (
     <section className="grid grid-cols-5 gap-4 items-center px-4 py-6 my-8">
-      <div className="min-h-[350px]  bg-slate-500/30 backdrop-blur-sm rounded-lg col-span-5 md:col-span-3"></div>
-      <div className="col-span-5 col-span-2 py-8 text-left px-8">
-        <h1 className="text-xl font-semibold">What are Psychometric Tests?</h1>
-        <p className="text-sm font-nowmal tracking-light">
-          A psychometric test assesses a candidate's cognitive ability and
-          personality. One of the most common uses of psychometric assessment is
-          for recruitment. From a candidate's response, psychometric assessment
-          tests can predict valuable insights such as job performance,
-          competence, and motivations. There are two general types of
-          psychometric testing: personality tests and aptitude tests.
+      <img src={FEEDBACK_SVG} className="col-span-5 md:col-span-2" />
+      <div className="col-span-5 md:col-span-3 py-8 text-left px-8">
+        <h1 className="text-xl font-semibold">What Is a Feedback Tool?</h1>
+        <p className="text-sm font-normal tracking-light">
+          A feedback tool is designed to facilitate the collection and delivery
+          of constructive feedback within an organization. Commonly used for
+          performance reviews, development initiatives, and ongoing coaching,
+          this tool provides structured insights into an individual's strengths,
+          areas for improvement, and overall performance. Feedback tools are
+          essential for promoting growth, enhancing communication, and driving
+          continuous improvement across teams and departments.
         </p>
       </div>
     </section>

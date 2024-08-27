@@ -7,33 +7,78 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { BsShield } from "react-icons/bs";
+
+import { BiCustomize } from "react-icons/bi";
+import { TbAutomaticGearbox, TbWorldLongitude } from "react-icons/tb";
+import { MdOutlinePriceCheck } from "react-icons/md";
+import { IconType } from "react-icons";
+import {
+  FaChalkboardTeacher,
+  FaLaptop,
+  FaRegUser,
+  FaShieldAlt,
+} from "react-icons/fa";
 
 export const AptitudeDifferentTypes = () => {
+  const WHY_TREXA = [
+    {
+      icon: FaShieldAlt,
+      text: "Top-Tier Security",
+    },
+    {
+      icon: BiCustomize,
+      text: "Flexible Exam Structures",
+    },
+    {
+      icon: FaRegUser,
+      text: "Intuitive User Interface",
+    },
+    {
+      icon: FaChalkboardTeacher,
+      text: "Real-Time Proctoring",
+    },
+    {
+      icon: TbAutomaticGearbox,
+      text: "Automatic Grading",
+    },
+    {
+      icon: TbWorldLongitude,
+      text: "Scalable for Any Class Size",
+    },
+    {
+      icon: FaLaptop,
+      text: "Paperless Examination",
+    },
+    {
+      icon: MdOutlinePriceCheck,
+      text: "Cost-Effective Solution",
+    },
+  ];
   return (
     <Card className="px-4 py-6 my-8 shadow-lg">
-      <CardHeader>
+      <CardHeader className="text-left lg:text-center">
         <CardTitle className="font-bold tracking-tighter">
-          Different types of online aptitude tests for all your needs
+          Comprehensive Online Aptitude Tests for Every Need
         </CardTitle>
         <CardDescription>
-          Man2Web | TrExa ready-to-use and scientifically validated online
-          aptitude tests help you accurately measure candidate fit and potential
-          for success. These aptitude exam also help identify and develop
-          potential leaders of tomorrow.
+          Man2Web | TrExa offers a range of scientifically validated and
+          ready-to-use online aptitude tests designed to accurately assess
+          candidate suitability and potential for success. Our aptitude exams
+          also play a crucial role in identifying and nurturing the leaders of
+          tomorrow.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-2 md:grid-cols-4">
-          {Array.from({ length: 8 }).map((_, index) => {
+          {WHY_TREXA.map((reason: { icon: IconType; text: string }, index) => {
             return (
               <div key={index} className="p-4">
                 <div className="flex flex-col items-center">
                   <div className="p-2 text-4xl">
-                    <BsShield />
+                    <reason.icon />
                   </div>
                   <p className="text-sm font-semibold tracking-tight">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    {reason.text}
                   </p>
                 </div>
               </div>

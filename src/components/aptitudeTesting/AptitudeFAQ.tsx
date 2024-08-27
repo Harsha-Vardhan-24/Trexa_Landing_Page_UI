@@ -7,82 +7,55 @@ import {
 } from "@/components/ui/accordion";
 
 export const AptitudeFAQ = () => {
+  const APTITUDE_DATA = [
+    {
+      question: "How are aptitude tests conducted?",
+      answer:
+        "Aptitude tests are conducted online through a series of timed questions designed to assess cognitive abilities such as numerical reasoning, logical thinking, and problem-solving skills. Candidates are evaluated based on their accuracy and speed in answering these questions.",
+    },
+    {
+      question: "What types of skills are evaluated in aptitude tests?",
+      answer:
+        "Our aptitude tests evaluate a range of cognitive skills, including numerical reasoning, verbal reasoning, logical reasoning, spatial awareness, and abstract thinking. These skills are crucial indicators of a candidate’s ability to succeed in various roles.",
+    },
+    {
+      question: "Can aptitude tests be customized?",
+      answer:
+        "Yes, our platform allows full customization of aptitude tests to meet the specific needs of your organization. You can select the types of questions, difficulty levels, and time limits that align with your recruitment or development goals.",
+    },
+    {
+      question: "How are the results of aptitude tests presented?",
+      answer:
+        "Results are presented in detailed reports that provide a comprehensive analysis of the candidate's cognitive abilities. The reports include scores for each test category, comparative benchmarks, and insights into the candidate’s potential for success in the role.",
+    },
+  ];
+
   return (
     <section className="px-4 py-6 my-8">
       <div className="col-span-2 py-8 px-8">
         <h1 className="text-2xl text-center font-semibold">
           Frequently Asked Questions(FAQs)
         </h1>
-        <div>
-          <Accordion type="single" collapsible className="w-full md:px-16 py-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Exam Controllers</AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-2 md:grid-cols-4">
-                  {Array.from({ length: 4 }).map((_, index) => {
-                    return (
-                      <div key={index} className="p-4">
-                        <div className="flex flex-col items-center">
-                          <div className="p-2 text-4xl">
-                            <BsShield />
-                          </div>
-                          <p className="text-sm font-semibold tracking-tight">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Administrators</AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-2 md:grid-cols-4">
-                  {Array.from({ length: 3 }).map((_, index) => {
-                    return (
-                      <div key={index} className="p-4">
-                        <div className="flex flex-col items-center">
-                          <div className="p-2 text-4xl">
-                            <BsShield />
-                          </div>
-                          <p className="text-sm font-semibold tracking-tight">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Professors/Faculty</AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-2 md:grid-cols-4">
-                  {Array.from({ length: 2 }).map((_, index) => {
-                    return (
-                      <div key={index} className="p-4">
-                        <div className="flex flex-col items-center">
-                          <div className="p-2 text-4xl">
-                            <BsShield />
-                          </div>
-                          <p className="text-sm font-semibold tracking-tight">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full lg:px-16 py-4 text-left"
+        >
+          {APTITUDE_DATA.map(
+            (data: { question: string; answer: string }, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index + 1}`}
+                className="text-left"
+              >
+                <AccordionTrigger className="text-left">
+                  {data.question}
+                </AccordionTrigger>
+                <AccordionContent>{data.answer}</AccordionContent>
+              </AccordionItem>
+            )
+          )}
+        </Accordion>
       </div>
     </section>
   );

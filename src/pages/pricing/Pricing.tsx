@@ -4,12 +4,17 @@ import { PricingFAQ } from "@/components/pricing/PricingFAQ";
 import { PricingKeyPoints } from "@/components/pricing/PricingKeyPoints";
 
 export const Pricing = () => {
-  const TITLE = "Simple and adjustable pricing";
-  const DESC =
-    "Exam.net has a 75-days free trial period per school. You will not automatically be moved into a paid plan after this period, instead you will be offered to buy a license for your school or organization.";
+  const TITLE_DETAILS = {
+    title: "Flexible and Transparent Pricing",
+    description:
+      "Enjoy a 75-day free trial with no automatic charges. After the trial, you can choose a plan that best fits your school or organization's needs. Our pricing is designed to be straightforward and adaptable, ensuring you only pay for what you use.",
+  };
   return (
     <section>
-      <TitleCard title={TITLE} description={DESC} />
+      <TitleCard
+        title={TITLE_DETAILS.title}
+        description={TITLE_DETAILS.description}
+      />
       <PricingKeyPoints />
       <PriceCalculator />
       <PricingFAQ />
