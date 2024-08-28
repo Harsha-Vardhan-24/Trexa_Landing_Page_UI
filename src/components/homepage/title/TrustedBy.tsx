@@ -15,10 +15,8 @@ export const TrustedBy = () => {
   ];
   return (
     <Card className="mt-24 md:mt-42 pt-6">
-      <CardTitle>
-        <h1 className="font-semibold text-slate-400 text-sm tracking-tighter">
-          Trusted by
-        </h1>
+      <CardTitle className="font-semibold text-slate-400 text-sm tracking-tighter">
+        Trusted by
       </CardTitle>
       <CardContent>
         <div className="flex flex-wrap md:flex-row gap-4 md:gap-8 lg:gap-20 justify-center">

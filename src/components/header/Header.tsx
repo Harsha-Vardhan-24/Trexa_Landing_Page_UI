@@ -151,6 +151,7 @@ export function Header() {
             {/* Pricing */}
             <NavigationMenuItem className="cursor-pointer">
               <NavigationMenuLink
+                href="/pricing"
                 className={`${navigationMenuTriggerStyle()} font-normal hover:font-semibold active:font-semibold`}
               >
                 Pricing

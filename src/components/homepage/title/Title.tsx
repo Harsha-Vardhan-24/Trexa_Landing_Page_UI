@@ -1,7 +1,6 @@
 import { Button } from "../../ui/button";
 
 export const Title = () => {
-  const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
   return (
     <section className="mt-24 md:mt-32">
       <h1 className="my-10 font-bold text-4xl md:text-6xl tracking-tight">
@@ -14,9 +13,7 @@ export const Title = () => {
         Conduct Customized Online Assessments on TrExa’s Robust Cloud-based
         Platform, Enhanced with Best-in-class Proctoring.
       </p>
-      <a target="_blank" href={MeetLink}>
-        <Button>Schedule Demo</Button>
-      </a>
+      <Button>Schedule Demo</Button>
     </section>
   );
 };
